@@ -1,113 +1,208 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>/r9k/</title>
-		<link rel="icon" href="favicon.ico">
 
-		<style type="text/css">
-			
-			* {
-				margin: 0;
-				padding: 0;
-			}
+<head>
+    <title>/r9k/</title>
+    <link rel="icon" href="favicon.ico">
 
-			body {
-				font-family: Calibri, sans-serif;
-			}
+    <style type="text/css">
+        @import url("https://fonts.googleapis.com/css?family=Amatic+SC:400,700");
+        body {
+          font-family: 'Amatic SC', sans-serif;
+          font-size: 100px;
+        }
+        .test {
+          -webkit-animation: squiggly-anim 0.34s linear infinite;
+                  animation: squiggly-anim 0.34s linear infinite;
+        }
+		 body {
+          background: #111;
+          color: #fff;
+        }
+        .test {
+          vertical-align: middle;
+          width: 100%;
+          outline: none;
+          text-align: center;
+          line-height: 1;
+        }
+        .small {
+          font-size: 0.5em;
+        }
+        .smaller {
+          font-size: 0.4em;
+          text-transform: lowercase;
+        }
+        p {
+          margin: 0;
+        }
+        @-webkit-keyframes squiggly-anim {
+          0% {
+            -webkit-filter: url("#squiggly-0");
+                    filter: url("#squiggly-0");
+          }
+          25% {
+            -webkit-filter: url("#squiggly-1");
+                    filter: url("#squiggly-1");
+          }
+          50% {
+            -webkit-filter: url("#squiggly-2");
+                    filter: url("#squiggly-2");
+          }
+          75% {
+            -webkit-filter: url("#squiggly-3");
+                    filter: url("#squiggly-3");
+          }
+          100% {
+            -webkit-filter: url("#squiggly-4");
+                    filter: url("#squiggly-4");
+          }
+        }
+        @keyframes squiggly-anim {
+          0% {
+            -webkit-filter: url("#squiggly-0");
+                    filter: url("#squiggly-0");
+          }
+          25% {
+            -webkit-filter: url("#squiggly-1");
+                    filter: url("#squiggly-1");
+          }
+          50% {
+            -webkit-filter: url("#squiggly-2");
+                    filter: url("#squiggly-2");
+          }
+          75% {
+            -webkit-filter: url("#squiggly-3");
+                    filter: url("#squiggly-3");
+          }
+          100% {
+            -webkit-filter: url("#squiggly-4");
+                    filter: url("#squiggly-4");
+          }
+        }
+        			
+        			
+        			* {
+        				margin: 0;
+        				padding: 0;
+        			}
+        
+        			body {
+        				font-family: Calibri, sans-serif;
+        			}
+        
+        			.background-wrap {
+        				position: fixed;
+        				z-index: -1000;
+        				width: 100%;
+        				height: 100%;
+        				overflow: hidden;
+        				top: 0;
+        				left: 0;
+        			}
+        			
+        			#video-bg-elem {
+        				position: absolute;
+        				top: 0;
+        				left: 0;
+        				min-height: 100%;
+        				min-width: 100%;
+        			}
+        
+        
+        			.content {
+        				position: absolute;
+        				width: 100%;
+        				min-height: 100%;
+        				z-index: 1000;
+        				background-color: rgba(0,0,0,0.7);
+        			}
+        			.content h1 {
+        				text-align: center;
+        				font-size: 65px;
+        				font-weight: 300;
+        				color: #fff;
+        				padding-top: 15%;
+        				margin-bottom: 10px;
+        				letter-spacing: 7px;
+        			}
+        			.content p {
+        				text-align: center;
+        				font-size: 20px;
+        				letter-spacing: 3px;
+        				color: #aaa;
+        			}
+        			.audio-container {
+        				display: flex;
+         				justify-content: center;
+          				align-items: center; 
+        			}
+    </style>
 
-			.background-wrap {
-				position: fixed;
-				z-index: -1000;
-				width: 100%;
-				height: 100%;
-				overflow: hidden;
-				top: 0;
-				left: 0;
-			}
-			
-			#video-bg-elem {
-				position: absolute;
-				top: 0;
-				left: 0;
-				min-height: 100%;
-				min-width: 100%;
-			}
+</head>
 
+<body>
 
-			.content {
-				position: absolute;
-				width: 100%;
-				min-height: 100%;
-				z-index: 1000;
-				background-color: rgba(0,0,0,0.7);
-			}
-			.content h1 {
-				text-align: center;
-				font-size: 65px;
-				font-weight: 300;
-				color: #fff;
-				padding-top: 15%;
-				margin-bottom: 10px;
-				letter-spacing: 7px;
-			}
-			.content p {
-				text-align: center;
-				font-size: 20px;
-				letter-spacing: 3px;
-				color: #aaa;
-			}
-			.audio-container {
-				display: flex;
- 				justify-content: center;
-  				align-items: center; 
-			}
-
-			
-		</style>
-		
-		
-	</head>
-	<body>
-		
-		
-		
-
-		<div class="background-wrap">
-			<video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted"> 
+    <div class="background-wrap">
+        <video id="video-bg-elem" preload="auto" autoplay="true" loop="loop" muted="muted"> 
 				<source src="video-bg.mp4" type="video/mp4">
 				Video not supported
-			</video>          
-		</div>
+			</video>
+    </div>
 
+    <div class="content">
+        <div class="test" contenteditable>
+            THE BEAT WOMEN PODCAST
+            <p class="small">– with -
+                <p />
+                <p class="smaller">mob</p>
+        </div>
 
-		<div class="content">
-			<h1>THE BEAT WOMEN PODCAST</h1>
-			<p>by mob</p>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+
+    <filter id="squiggly-0">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="0" />
+      <feDisplacementMap id="displacement" in="SourceGraphic" in2="noise" scale="6" />
+    </filter>
+    <filter id="squiggly-1">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="1" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+    </filter>
+
+    <filter id="squiggly-2">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="2" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+    </filter>
+    <filter id="squiggly-3">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="3" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" />
+    </filter>
+
+    <filter id="squiggly-4">
+      <feTurbulence id="turbulence" baseFrequency="0.02" numOctaves="3" result="noise" seed="4" />
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" />
+    </filter>
+  </defs>
+</svg>
+		<br>
+        <br>
+        <div class='audio-container'>
+            <audio src="http://44.235.120.57:8000/r9k" autoplay="false" controls="true"></audio>
+        </div>
+        <br>
+        <p>Join the podcast LIVE</p>
+       
+        <a href="https://discord.gg/tT2hHf9">
+            <p>
+                <a href="https://discord.gg/tT2hHf9"><img src=discord.png width="30" height="30"></a>
+            </p>
+            <br>
 			<br>
-			<br>
-			<br>
-			<br>
-			<div class='audio-container'>
-   			<audio src="http://44.235.120.57:8000/r9k" autoplay="false" controls="true"></audio>
-			</div>
-			<br>
-			<p><iframe src="https://chat.addachat.com/?bgs=on&bg=black&name=robot&room=the r9k talk show&sidebar=off&format=on&images=small" height="400" width="500" name="gFrameTop"></iframe></p>
-			<br>
-			<br>
-			<p>Join the podcast LIVE</p>
-			<br><a href="https://discord.gg/tT2hHf9">
-        <p><a href="https://discord.gg/tT2hHf9"><img src=discord.png width="30" height="30"></a> </p>
-			<br>
-			<br>
-			<br>
-			<br>
-			<p>every thursday at 6pm CST</p>
-		
-			<p><a href="archive.html">archive - previous EP.</a></p>
-			<br>
-			<br>
-		</div>
-	
-		
-	</body>
+            <p>every thursday at 6pm CST</p>
+            <p><a href="archive.html">archive - previous EP.</a></p>
+    </div>
+
+</body>
+
 </html>
